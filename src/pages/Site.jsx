@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import { supabase } from '../supabaseClient'
 import Header from '../components/Header'
+import DeliveryBanner from '../components/DeliveryBanner'
 import Hero from '../components/Hero'
 import Filters from '../components/Filters'
 import ProductCard from '../components/ProductCard'
@@ -41,6 +42,7 @@ export default function Site() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header businessName={settings.business_name} logoUrl={settings.logo_url} />
+      <DeliveryBanner />
       <Hero />
       <div className="torn-divider" />
 
