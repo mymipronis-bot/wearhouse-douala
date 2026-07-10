@@ -1,10 +1,8 @@
-const WHATSAPP_NUMBER = '237674874008' // +237 674 87 40 08
-
-export default function WhatsAppButton({ product, className = '', full = false }) {
+export default function WhatsAppButton({ product, whatsappNumber = '237674874008', className = '', full = false }) {
   const message = encodeURIComponent(
-    `Bonjour WearHouseDouala 👋\nJe suis intéressé(e) par : ${product.name} (${product.brand})\nTaille : ${product.size}\nPrix : ${product.price.toLocaleString('fr-FR')} FCFA\n\nEst-ce toujours disponible ?`
+    `Bonjour 👋\nJe suis intéressé(e) par : ${product.name} (${product.brand})\nTaille : ${product.size}\nPrix : ${product.price.toLocaleString('fr-FR')} FCFA\n\nEst-ce toujours disponible ?`
   )
-  const link = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`
+  const link = `https://wa.me/${whatsappNumber}?text=${message}`
 
   return (
     <a
