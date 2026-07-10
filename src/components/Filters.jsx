@@ -1,6 +1,4 @@
-import { categories, brands } from '../data/products'
-
-export default function Filters({ activeCategory, setActiveCategory, activeBrand, setActiveBrand }) {
+export default function Filters({ categories, brands, activeCategory, setActiveCategory, activeBrand, setActiveBrand }) {
   return (
     <div className="flex flex-wrap gap-2 mb-6">
       <button
