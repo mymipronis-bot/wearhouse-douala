@@ -3,11 +3,11 @@ import WhatsAppButton from './WhatsAppButton'
 export default function ProductCard({ product, whatsappNumber, rotate }) {
   return (
     <div className={`hang-tag p-3 flex flex-col mt-3 ${rotate}`}>
-      <div className="relative">
+      <div className="relative bg-[#f0ebe0] border border-ink/20">
         <img
           src={product.image_url || 'https://placehold.co/400x400/EDE6D6/1A1815?text=Photo+bientot'}
           alt={`${product.name} - ${product.brand}`}
-          className="w-full aspect-square object-cover border border-ink/20"
+          className="w-full h-72 object-contain"
         />
         {product.stock <= 3 && (
           <span className="absolute top-2 left-2 bg-safety text-cream text-xs font-stencil px-2 py-1">
